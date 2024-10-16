@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    max-width: 1140px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: space-between;
+}
+
+.gap-33 {
+    gap: 33px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.color {
+    color: white;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.align-item {
+    align-items: center;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.products {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.startup {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.25px;
+    letter-spacing: -0.2926828861236572px;
+    text-align: center;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btn {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    width: 100px;
+    height: 40.1px;
+    border-radius: 100px;
+    background: #25DAC5;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.flex-grow {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.bg-img {
+    background-image: url(../images/Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2f1893;
+    background-position: center;
+}
+
+.head {
+    font-family: "DM Sans", sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 700px;
+    margin-top: 70px;
+}
+
+.play {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.end {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    max-width: 519px;
+    color: white;
+    margin-top: 50px;
+}
+
+@media (max-width:767.98px) {
+    .open {
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: orange;
+        transition: all 200ms linear;
+        gap: 33px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    label[for="openslider"] {
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    label[for="openslider"] span {
+        width: 100%;
+        height: 5px;
+        right: 0%;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 200ms linear;
+        z-index: 1;
+    }
+
+    input:checked~.open {
+        right: 0%;
+    }
+
+    input:checked~label[for="openslider"] span:first-child {
+        transform: rotate(30deg);
+        transform-origin: left;
+    }
+
+    input:checked~label[for="openslider"] span:last-child {
+        transform: rotate(-30deg);
+        transform-origin: left;
+    }
+
+    input:checked~label[for="openslider"] span:nth-child(2) {
+        transform: translateX(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width:576px) {
+    .head {
+        font-size: 40px;
+    }
+
+    .end {
+        margin-bottom: 30px;
+    }
+}
